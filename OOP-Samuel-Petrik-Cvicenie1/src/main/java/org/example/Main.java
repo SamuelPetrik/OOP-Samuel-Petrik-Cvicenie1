@@ -29,7 +29,8 @@ Scanner NacitanieKlavesnica = new Scanner(System.in);
     Znamenie(int day, int month, String vysledok){
     switch (month)
     {
-        case 1 {
+        case 1:
+        {
             if (day <= 20) {
                 vysledok = "Kozorozec";
             } else if (day > 20 && day <= 31) vysledok = "vodnar";
@@ -37,96 +38,110 @@ Scanner NacitanieKlavesnica = new Scanner(System.in);
             break;
         }
 
-        case 2 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 2:
+        {
+            if (day <= 19) {
+                vysledok = "Vodnar";
+            } else if (day > 19 && day <= 29) vysledok = "Ryby";
             else vysledok = "chyba";
             break;
         }
 
-        case 3 {
+        case 3:
+        {
             if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+                vysledok = "Ryby";
+            } else if (day > 20 && day <= 31) vysledok = "Baran";
             else vysledok = "chyba";
             break;
         }
 
-        case 4 {
+        case 4:
+        {
             if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+                vysledok = "Baran";
+            } else if (day > 20 && day <= 30) vysledok = "Byk";
             else vysledok = "chyba";
             break;
         }
 
-        case 5 {
+        case 5:
+        {
             if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+                vysledok = "Byk";
+            } else if (day > 20 && day <= 31) vysledok = "Blizenci";
             else vysledok = "chyba";
             break;
         }
 
-        case 6 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 6:
+        {
+            if (day <= 21) {
+                vysledok = "Blizenci";
+            } else if (day > 21 && day <= 30) vysledok = "Rak";
             else vysledok = "chyba";
             break;
         }
 
-        case 7 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 7:
+        {
+            if (day <= 22) {
+                vysledok = "Rak";
+            } else if (day > 22 && day <= 31) vysledok = "Lev";
             else vysledok = "chyba";
             break;
         }
 
-        case 8 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 8:
+        {
+            if (day <= 22) {
+                vysledok = "Lev";
+            } else if (day > 22 && day <= 31) vysledok = "Panna";
             else vysledok = "chyba";
             break;
         }
 
-        case 9 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 9:
+        {
+            if (day <= 22) {
+                vysledok = "Panna";
+            } else if (day > 22 && day <= 30) vysledok = "Váhy";
             else vysledok = "chyba";
             break;
         }
 
-        case 10 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 10:
+        {
+            if (day <= 22) {
+                vysledok = "Vahy";
+            } else if (day > 22 && day <= 31) vysledok = "Skorpion";
             else vysledok = "chyba";
             break;
         }
 
-        case 11 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 11:
+        {
+            if (day <= 22) {
+                vysledok = "Skorpion";
+            } else if (day > 22 && day <= 30) vysledok = "Strelec";
             else vysledok = "chyba";
             break;
         }
 
-        case 1 {
-            if (day <= 20) {
-                vysledok = "Kozorozec";
-            } else if (day > 20 && day <= 31) vysledok = "vodnar";
+        case 12:
+        {
+            if (day <= 21) {
+                vysledok = "Strelec";
+            } else if (day > 21 && day <= 31) vysledok = "Kozorozec";
             else vysledok = "chyba";
             break;
         }
-        case (default)
+
+        defaul:
+        {
+            vysledok = "chyba";
             break;
-    }
+        }
 
 
     }
