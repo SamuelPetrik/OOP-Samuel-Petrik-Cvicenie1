@@ -1,34 +1,53 @@
-package org.example;
+package main.java.org.example;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("ENG: Hello world! <---> SVK: Ahoj svet!");
-    }
+
 
 
 Scanner NacitanieKlavesnica = new Scanner(System.in);
 
-
-    while(char == 'Y'){
-
+    char odpoved = 'Y';
+    String znamenie;
+    while (odpoved == 'Y')
+    {
         System.out.println("Zadajte den narodenia:");
         int den = NacitanieKlavesnica.nextInt();
 
         System.out.println("Zadajte mesiac narodnia");
         int mesiac = NacitanieKlavesnica.nextInt();
 
-        String vysledok = Znamenie(mesiac, den);
-        System.out.println("Vase znamenie zverokruhu je:" + vysledok);
+        znamenie = Zverokruh(mesiac, den);
+        System.out.println("Vase znamenie zverokruhu je:" + znamenie);
 
         System.out.println("Chcete pokracovat (Y/N)");
-        char odpoved = NacitanieKlavesnica.next().charAt(0);
+        odpoved = NacitanieKlavesnica.next().charAt(0);
     }
-
-    Znamenie(int day, int month, String vysledok){
-    switch (month)
+    System.out.println("Zadajte velkost pola");
+    int N = NacitanieKlavesnica.nextInt();
+    int [] CeleCisla = new int [N];
+    int I=1;
+    for(int i=0;i<N;i++)
     {
+
+        System.out.println(I + ". prvok: ");
+        CeleCisla[i] = NacitanieKlavesnica.nextInt();
+        I++;
+    }
+    System.out.println("vypis");
+    for(int i=0;i<N;i++)
+    {
+        System.out.println(CeleCisla[i]);
+    }
+}
+
+    static String Zverokruh(int month, int day)
+    {
+    String vysledok;
+    switch (month) {
         case 1:
         {
             if (day <= 20) {
@@ -137,7 +156,7 @@ Scanner NacitanieKlavesnica = new Scanner(System.in);
             break;
         }
 
-        defaul:
+        default:
         {
             vysledok = "chyba";
             break;
@@ -145,8 +164,8 @@ Scanner NacitanieKlavesnica = new Scanner(System.in);
 
 
     }
-
+    return vysledok;
 
     }
-}
 
+}
